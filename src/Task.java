@@ -5,12 +5,10 @@ public class Task {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите день");
         String day = sc.nextLine();
-        if (isWeekend(day)) {
-            System.out.println("Ура, выходной!");
-        } else System.out.println("Надо еще поработать");
+        System.out.println(isWeekend(day));
     }
 
-    public static boolean isWeekend(String weekDay) {
-        return weekDay.equals("Saturday") || weekDay.equals("Sunday") ? true : false;
+    public static String isWeekend(String weekDay) {
+        return weekDay.equals("Saturday") || weekDay.equals("Sunday") ? "Ура, выходной!" : "Надо еще поработать";
     }
 }
